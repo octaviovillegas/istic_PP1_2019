@@ -34,7 +34,7 @@ session_start();
     <main role="main" class="container">
          
       <h1 class="mt-5">Estacionamiento IStic</h1>
-      <p class="lead">Bienvenido a Estacionamientos Alumno</p>
+      <p class="lead">Bienvenido a Estacionamientos en WEB</p>
 
     </main>
       
