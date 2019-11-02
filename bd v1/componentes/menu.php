@@ -15,10 +15,16 @@
               //solo muestra estos item , si el usuario no esta logeado
             ?>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/registro.php">Registrate</a>
+              <a class="nav-link" href="/paginas/registro.php">Registrate</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="/istic2019/Session/paginas/login.php">Login</a>
+              <a class="nav-link" href="../paginas/login.php">Login</a>
+            </li>
+             <li class="nav-item ">
+              <a class="nav-link" href="/funciones/traerDatos.php">funciones 1</a>
+            </li>
+             <li class="nav-item ">
+              <a class="nav-link" href="../funciones/traerDatos.php">funciones 2</a>
             </li>
             <?php 
             }
