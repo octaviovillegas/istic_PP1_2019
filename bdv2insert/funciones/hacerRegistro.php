@@ -3,12 +3,12 @@ include 'AccesoDatos.php';
 
 $miObjeto = new stdClass();
 $miObjeto->nombre = $_GET['inputUsuario'];
-$miObjeto->apellido = $_GET['inputPassword'];
+$miObjeto->clave = $_GET['inputPassword'];
 
 
 
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-$select="INSERT INTO usuario( nombre, clave) VALUES ('lalala','1234')";
+$select="INSERT INTO `usuario`(`nombre`, `clave`) VALUES ('$miObjeto->nombre','$miObjeto->clave')";
 $consulta =$objetoAccesoDato->RetornarConsulta($select);
 $consulta->execute();
 
