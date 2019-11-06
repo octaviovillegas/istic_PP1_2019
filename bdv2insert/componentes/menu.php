@@ -18,7 +18,7 @@
               <a class="nav-link" href="./paginas/registro.php">Registrate</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="/istic2019/Session/paginas/login.php">Login</a>
+              <a class="nav-link" href="../paginas/login.php">Login</a>
             </li>
             <?php 
             }
@@ -33,12 +33,12 @@
               <a class="nav-link" href="../paginas/ingresoVehiculo.php">Ingresar Vehiculo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/facturarVehiculo.php">Facturar Vehiculo</a>
+              <a class="nav-link" href="../paginas/facturarVehiculo.php">Facturar Vehiculo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/listarUsuarios.php">Listar Usuarios</a>
+              <a class="nav-link" href="../paginas/listadoUsuarios.php">Listar Usuarios</a>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/listarVehiculos.php">Listar Vehiculos</a>
+              <a class="nav-link" href="../paginas/listarVehiculos.php">Listar Vehiculos</a>
             </li>
           
             <?php 
@@ -54,10 +54,10 @@
 
            
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/historicoVehiculos.php">Historial Vehiculos</a>
+              <a class="nav-link" href="../paginas/historicoVehiculos.php">Historial Vehiculos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/istic2019/Session/paginas/historicoEmpleados.php">Historial Empleados</a>
+              <a class="nav-link" href="../paginas/historicoEmpleados.php">Historial Empleados</a>
             </li>
 
             <?php 
@@ -65,7 +65,7 @@
             ?>
          
           </ul>
-          <form class="form-inline mt-2 mt-md-0" action="/istic2019/Session/funciones/hacerLogout.php">
+          <form class="form-inline mt-2 mt-md-0" action="../funciones/hacerLogout.php">
             <input class="form-control mr-sm-2" type="text" placeholder="Quien Soy" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Salir</button>
           </form>

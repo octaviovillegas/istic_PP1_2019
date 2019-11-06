@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+	include 'AccesoDatos.php';
 	$usuarioIngresado = $_GET['inputEmail'];
 	$claveIngresada = $_GET['inputPassword'];
 	
@@ -19,31 +19,28 @@
 
 			/* voy a buscar a la base de datos y traigo un arra asociativo */
 
-
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 			$consulta =$objetoAccesoDato->RetornarConsulta("select * from usuario");
 			$consulta->execute();			
 			$ArrayAsociaticoConDatos= $consulta->fetchAll(PDO::FETCH_ASSOC);		
-	
+	//var_dump($ArrayAsociaticoConDatos);die();
 
 			/*volvi de la base de datos*/
 		
 		// antes con archivos => //while(!feof($archivo)) 
 
-		foreach ($ArrayAsociaticoConDatos as $usuario) {
-			# code...
-		}
+		foreach ($ArrayAsociaticoConDatos as $usuario) 
 		{
 			// antes con archivos => //$objeto = json_decode(fgets($archivo));
-			if ($objeto->usuario == $usuarioIngresado) 
+			if ( $usuario["nombre"] == $usuarioIngresado) 
 			{	
 				$booUsuario = 1;
-				if ($objeto->password == $claveIngresada)
+				if ($usuario["clave"] == $claveIngresada)
 				{
-					fclose($archivo);
-					$_SESSION['usuario']=$objeto->usuario;
-					$_SESSION['perfil']=$objeto->perfil;
-					setcookie("usuario", $_SESSION['usuario'], expires_or_options, path, domain, secure, httponly)
+					//fclose($archivo);
+					$_SESSION['usuario']=$usuario["nombre"] ;
+					$_SESSION['perfil']=$usuario["perfil"] ;
+					setcookie("usuario", $_SESSION['usuario']);
 					header("Location: ../paginas/login.php?exito=signup");
 					exit();
 				}			
